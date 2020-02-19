@@ -11,31 +11,31 @@ public class FavoriteArticleModel {
     @Expose
     @PrimaryKey
     public Long  id;
-    private String articleType;
-    private String articletitle;
-    private String articleDate;
+    private String productType;
+    private String productTitle;
+    private String productPrice;
     private String imageUrl;
 
-    public FavoriteArticleModel(Long id, String articleType, String articletitle, String articleDate, String imageUrl) {
-        this.articleType = articleType;
-        this.articletitle = articletitle;
-        this.articleDate = articleDate;
+    public FavoriteArticleModel(Long id, String productType, String productTitle, String productPrice, String imageUrl) {
+        this.productType = productType;
+        this.productTitle = productTitle;
+        this.productPrice = productPrice;
         this.id = id;
         this.imageUrl = imageUrl;
 
     }
 
 
-    public String getArticleDate() {
-        return articleDate;
+    public String getProductPrice() {
+        return productPrice;
     }
 
-    public String getArticletitle() {
-        return articletitle;
+    public String getProductTitle() {
+        return productTitle;
     }
 
-    public String getArticleType() {
-        return articleType;
+    public String getProductType() {
+        return productType;
     }
 
     public Long getId() {

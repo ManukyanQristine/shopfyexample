@@ -1,6 +1,7 @@
 package com.shopify.task.adapters;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,8 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
         final Product product = productList.get(position);
         holder.itemProductTitle.setText(product.getTitle());
         holder.itemProductType.setText(product.getProductType());
-        holder.itemProductPrice.setText(product.getVariants().get(0).getPrice() + " $");
+        holder.itemProductPrice.setText(String.format("%s $", product.getVariants().get(0).getPrice()));
+        holder.itemProductDescription.setText(Html.fromHtml(product.getBodyHtml()));
         holder.itemView.setTag(product);
         if (product.getImage() != null && product.getImage().getSrc() != null) {
             Glide.with(holder.imageView.getContext())
@@ -59,6 +61,7 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
         private TextView itemProductTitle;
         private TextView itemProductType;
         private TextView itemProductPrice;
+        private TextView itemProductDescription;
         private Button addFavorivebtn;
         private ImageView imageView;
 
@@ -66,8 +69,9 @@ public class ProductsListAdapter extends RecyclerView.Adapter<ProductsListAdapte
             super(view);
             itemProductTitle = view.findViewById(R.id.item_product_title);
             itemProductType = view.findViewById(R.id.item_product_type);
-            itemProductPrice = view.findViewById(R.id.item_produc_price);
+            itemProductPrice = view.findViewById(R.id.item_product_price);
             addFavorivebtn = view.findViewById(R.id.add_favorite_btn);
+            itemProductDescription = view.findViewById(R.id.item_product_description);
             imageView = view.findViewById(R.id.item_image);
             addFavorivebtn.setOnClickListener(new View.OnClickListener() {
                 @Override

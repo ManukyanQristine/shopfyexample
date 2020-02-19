@@ -55,7 +55,20 @@
         tools:ignore="UnknownIdInLayout" />
 
     <TextView
-        android:id="@+id/item_produc_price"
+        android:id="@+id/item_product_price"
+        android:layout_width="150dp"
+        android:layout_height="24dp"
+        android:textColor="@color/colorPrice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_favorite_btn"
+        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_image">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/item_product_description"
         android:layout_width="274dp"
         android:layout_height="24dp"
         android:layout_below="@+id/item_product_title"
@@ -64,7 +77,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:textColor="@color/colorGreen"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/item_image"
         app:layout_constraintTop_toBottomOf="@+id/item_product_type" />

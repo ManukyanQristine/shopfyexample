@@ -38,9 +38,9 @@ public class FavoriteProductAdapter extends RecyclerView.Adapter<FavoriteProduct
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, int position) {
         final FavoriteArticleModel borrowModel = borrowModelList.get(position);
-        holder.itemArticleTitle.setText(borrowModel.getArticletitle());
-        holder.itemArticleType.setText(borrowModel.getArticleType());
-        holder.itemArticleDate.setText(borrowModel.getArticleDate());
+        holder.itemProductTitle.setText(borrowModel.getProductPrice());
+        holder.itemProductType.setText(borrowModel.getProductType());
+        holder.itemProductPrice.setText(String.format("%s$", borrowModel.getProductPrice()));
         holder.itemView.setTag(borrowModel);
         holder.addFavorivebtn.setText(TaskApplication.getContext().getString(R.string.delete_favorite));
         if (borrowModel.getImageUrl() != null) {
@@ -61,17 +61,17 @@ public class FavoriteProductAdapter extends RecyclerView.Adapter<FavoriteProduct
     }
 
     class RecyclerViewHolder extends RecyclerView.ViewHolder {
-        private TextView itemArticleTitle;
-        private TextView itemArticleType;
-        private TextView itemArticleDate;
+        private TextView itemProductTitle;
+        private TextView itemProductType;
+        private TextView itemProductPrice;
         private ImageView itemArticleImage;
         private Button addFavorivebtn;
 
         RecyclerViewHolder(View view) {
             super(view);
-            itemArticleTitle = view.findViewById(R.id.item_product_title);
-            itemArticleType = view.findViewById(R.id.item_product_type);
-            itemArticleDate = view.findViewById(R.id.item_produc_price);
+            itemProductTitle = view.findViewById(R.id.item_product_title);
+            itemProductType = view.findViewById(R.id.item_product_type);
+            itemProductPrice = view.findViewById(R.id.item_product_description);
             itemArticleImage = view.findViewById(R.id.item_image);
             addFavorivebtn = view.findViewById(R.id.add_favorite_btn);
             addFavorivebtn.setOnClickListener(new View.OnClickListener() {
