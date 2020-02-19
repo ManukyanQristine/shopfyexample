@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="main_item_height">150dp</dimen>
+    <dimen name="radius_8dp">8dp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="radius_6dp">6dp</dimen>
+    <dimen name="main_item_button_width">90dp</dimen>
+    <dimen name="main_item_button_height">30dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_60dp">60dp</dimen>
+    <dimen name="_90dp">90dp</dimen>
+</resources>

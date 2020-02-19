@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/myToolBarBackground_60" />
+            <corners android:radius="@dimen/radius_8dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+
+            <gradient
+                android:angle="-90"
+                android:endColor="#1A000000"
+                android:startColor="#00000000"
+                android:type="linear" />
+
+            <corners android:radius="@dimen/radius_8dp" />
+        </shape>
+    </item>
+</layer-list>
